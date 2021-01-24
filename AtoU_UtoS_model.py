@@ -61,7 +61,7 @@ def simple(X_Y):
     
     # global mode full
     if global_mode==0:
-        beta5 = 300*len(mt_region)
+        beta5 = 350*len(mt_region)
     
     # global mode 1/x
     if global_mode==1:
@@ -142,7 +142,7 @@ def simple(X_Y):
 #     import time
 #     #import cProfile
 #     t1 = time.time()
-#     simple([191, 49, 130, 0])
+#     simple([203, 50, 50, 0])
 #     print(time.time() - t1)
 
 

@@ -211,7 +211,7 @@ def t_loop(double duration, int[:] mt_region, int[:] positions, double[:] rates,
                 # the nucleosome at that posion is selected
                 nuc_conv = mt_region[pos_conv]
             else:
-                nuc_conv = -1
+                nuc_conv = -10
             
             # if the recruiting nucleosome is in state A
             if nuc_rec == 0:

@@ -22,7 +22,7 @@ time_start = time.time()
 #pool = multiprocessing.Pool(multiprocessing.cpu_count(), maxtasksperchild=None)
 pool = multiprocessing.Pool(multiprocessing.cpu_count())
 
-mode = 2
+mode = 0
     
 
 # Generate determin parameter x and y values
@@ -367,8 +367,3 @@ elif mode == 4:
     # save Timing list
     with open('b_list_1x025_S150_standard_AtoU_UtoS.txt', 'wb') as F:
         pickle.dump(b_value_list, F)
-    
-
-    
-    
-    
