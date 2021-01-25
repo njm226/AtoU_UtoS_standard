@@ -21,10 +21,10 @@ pool = multiprocessing.Pool(multiprocessing.cpu_count())
 mode = 1
     
 if mode == 1:
-    X_Y=[[153,30,130, 1]]
-    X_Y_sm=[[182,30,130, 1]]
-    X_Y_sl=[[191,30,130, 1]]
-    X_Y_max=[[203,30,130, 1]]
+    X_Y=[[153,40,130, 1]]
+    X_Y_sm=[[182,40,130, 1]]
+    X_Y_sl=[[191,40,130, 1]]
+    X_Y_max=[[203,40,130, 1]]
     
 elif mode == 2:
     X_Y=[[153, 80, 110, 2]]
@@ -549,7 +549,7 @@ plt.legend(fontsize=35)
 plt.tick_params(width=4,length=4)
 
 if mode == 1:
-    plt.savefig("timecourse_1x_gUtoM30_AtoU130_120.pdf")
+    plt.savefig("timecourse_1x_gUtoM40_AtoU130_120.pdf")
     
 elif mode == 2:
     plt.savefig("timecourse_075x_gUtoM80_AtoU110_250.pdf")
