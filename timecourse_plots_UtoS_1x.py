@@ -21,29 +21,28 @@ pool = multiprocessing.Pool(multiprocessing.cpu_count())
 mode = 1
     
 if mode == 1:
-    X_Y=[[153,110,40, 1]]
-    X_Y_sm=[[182, 110,40, 1]]
-    X_Y_sl=[[191,110,40, 1]]
-    X_Y_max=[[203,110,40, 1]]
+    X_Y=[[153,30,130, 1]]
+    X_Y_sm=[[182,30,130, 1]]
+    X_Y_sl=[[191,30,130, 1]]
+    X_Y_max=[[203,30,130, 1]]
     
 elif mode == 2:
-    X_Y=[[153, 70, 60, 2]]
-    X_Y_sm=[[182, 70, 60, 2]]
-    X_Y_sl=[[191, 70, 60, 2]]
-    X_Y_max=[[203, 70, 60, 2]]
+    X_Y=[[153, 80, 110, 2]]
+    X_Y_sm=[[182, 80, 110, 2]]
+    X_Y_sl=[[191, 80, 110, 2]]
+    X_Y_max=[[203, 80, 110, 2]]
     
 elif mode == 3:
-    X_Y=[[153, 60, 80, 3]]
-    X_Y_sm=[[182, 60, 80, 3]]
-    X_Y_sl=[[191, 60, 80, 3]]
-    X_Y_max=[[203, 60, 80, 3]]
+    X_Y=[[153, 60, 140, 3]]
+    X_Y_sm=[[182, 60, 140, 3]]
+    X_Y_sl=[[191, 60, 140, 3]]
+    X_Y_max=[[203, 60, 140, 3]]
     
 elif mode == 4:
     X_Y=[[153, 120, 150, 4]]
     X_Y_sm=[[182, 120, 150, 4]]
     X_Y_sl=[[191, 120, 150, 4]]
     X_Y_max=[[203, 120, 150, 4]]
-
 
 reps=10000
 
@@ -512,6 +511,9 @@ EcoRV_total_max = (sum(EcoRV_list_max))/reps
 
 
 
+
+
+
 time = np.array(range(duration))
 
 #y_axis = np.array([cenH_total_small, EcoRV_total_small,  cenH_total_m, EcoRV_total_m, cenH_total_large, EcoRV_total_large,cenH_total_max, EcoRV_total_max])
@@ -547,16 +549,20 @@ plt.legend(fontsize=35)
 plt.tick_params(width=4,length=4)
 
 if mode == 1:
-    plt.savefig("timecourse_1x_gUtoM110_AtoU40_120.pdf")
+    plt.savefig("timecourse_1x_gUtoM30_AtoU130_120.pdf")
     
 elif mode == 2:
-    plt.savefig("timecourse_075x_gUtoM70_AtoU60_250.pdf")
+    plt.savefig("timecourse_075x_gUtoM80_AtoU110_250.pdf")
     
 elif mode == 3:
-    plt.savefig("timecourse_05x_gUtoM60_AtoU80_200.pdf")
+    plt.savefig("timecourse_05x_gUtoM60_AtoU140_200.pdf")
     
 elif mode == 4:
     plt.savefig("timecourse_025x_gUtoM120_AtoU140.pdf")
+    
+    
+    
+
     
 
 

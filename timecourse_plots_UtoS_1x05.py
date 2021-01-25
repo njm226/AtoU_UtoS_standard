@@ -21,29 +21,28 @@ pool = multiprocessing.Pool(multiprocessing.cpu_count())
 mode = 3
     
 if mode == 1:
-    X_Y=[[153,50,60, 1]]
-    X_Y_sm=[[182,50,60, 1]]
-    X_Y_sl=[[191,50,60, 1]]
-    X_Y_max=[[203,50,60, 1]]
+    X_Y=[[153,30,130, 1]]
+    X_Y_sm=[[182,30,130, 1]]
+    X_Y_sl=[[191,30,130, 1]]
+    X_Y_max=[[203,30,130, 1]]
     
 elif mode == 2:
-    X_Y=[[153, 69, 60, 2]]
-    X_Y_sm=[[182, 69, 60, 2]]
-    X_Y_sl=[[191, 69, 60, 2]]
-    X_Y_max=[[203, 69, 60, 2]]
+    X_Y=[[153, 80, 110, 2]]
+    X_Y_sm=[[182, 80, 110, 2]]
+    X_Y_sl=[[191, 80, 110, 2]]
+    X_Y_max=[[203, 80, 110, 2]]
     
 elif mode == 3:
-    X_Y=[[153, 59, 80, 3]]
-    X_Y_sm=[[182, 59, 80, 3]]
-    X_Y_sl=[[191, 59, 80, 3]]
-    X_Y_max=[[203, 59, 80, 3]]
+    X_Y=[[153, 60, 140, 3]]
+    X_Y_sm=[[182, 60, 140, 3]]
+    X_Y_sl=[[191, 60, 140, 3]]
+    X_Y_max=[[203, 60, 140, 3]]
     
 elif mode == 4:
     X_Y=[[153, 120, 150, 4]]
     X_Y_sm=[[182, 120, 150, 4]]
     X_Y_sl=[[191, 120, 150, 4]]
     X_Y_max=[[203, 120, 150, 4]]
-
 
 reps=10000
 
@@ -489,6 +488,81 @@ EcoRV_total_max = (sum(EcoRV_list_max))/reps
 #     # save state_list
 #     with open('cenH_max_1x025_gUtoM110_AtoU150_S55.txt', 'wb') as F:
 #         pickle.dump(cenH_total_max, F)
+        
+        
+        
+    
+        
+#     # save state_list
+#     with open('EcoRV_small_1x025_gUtoM110_AtoU150_S55.txt', 'wb') as F:
+#         pickle.dump(EcoRV_total_small, F)
+        
+#     # save state_list
+#     with open('EcoRV_m_1x025_gUtoM110_AtoU150_S55.txt', 'wb') as F:
+#         pickle.dump(EcoRV_total_m, F)
+        
+#     # save state_list
+#     with open('EcoRV_large_1x025_gUtoM110_AtoU150_S55.txt', 'wb') as F:
+#         pickle.dump(EcoRV_total_large, F)
+        
+#     # save state_list
+#     with open('EcoRV_max_1x025_gUtoM7110_AtoU150_S55.txt', 'wb') as F:
+#         pickle.dump(EcoRV_total_max, F)
+
+
+
+
+
+
+time = np.array(range(duration))
+
+#y_axis = np.array([cenH_total_small, EcoRV_total_small,  cenH_total_m, EcoRV_total_m, cenH_total_large, EcoRV_total_large,cenH_total_max, EcoRV_total_max])
+        
+#fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3, figsize=((36, 12)))
+fig, (ax1) = plt.subplots(nrows=1, ncols=1, figsize=((15, 10)))
+#default line colors and styles
+ax1.plot(time,EcoRV_total_small, color='yellowgreen', label='mCherry 23 kb region')
+ax1.plot(time,cenH_total_small, color='cyan', label='cenH 23 kb region')
+ax1.plot(time,EcoRV_total_m, color='black', label='mCherry 27.5 kb region')
+#ax1.plot(time,cenH_total_m,'ro', label='cenH 24 kb region')
+ax1.plot(time,EcoRV_total_large, color='red', label='mCherry 29 kb region')
+#ax1.plot(time,cenH_total_large, color='blue', label='cenH 26 kb region')
+ax1.plot(time,EcoRV_total_max, color='gold', label='mCherry 31 kb region')
+#ax1.plot(time,cenH_total_max, color='purple', label='cenH 28 kb region')
+ax1.legend(loc='upper left')
+#ax1.set_ylabel("fraction of 'ON' cells", fontsize = 35)  
+#ax1.set_xlabel('t (generations)', fontsize = 35)  
+
+plt.fill_between(time,cenH_total_small, color='lightblue')
+ax1.set_yscale('log')    
+ax1.tick_params(labelsize='30')
+ax1.set_ylim([0.001,1])
+plt.ylim([0.001,1])
+plt.yticks(fontsize=40)
+plt.xticks(fontsize=40)
+plt.xlim([0,200])
+plt.xticks([])
+plt.yscale('log')
+plt.xticks([50,100,150,200],[])
+plt.yticks([1,0.1,0.01],[1, 0.1, 0.01])
+plt.legend(fontsize=35)
+plt.tick_params(width=4,length=4)
+
+if mode == 1:
+    plt.savefig("timecourse_1x_gUtoM30_AtoU130_120.pdf")
+    
+elif mode == 2:
+    plt.savefig("timecourse_075x_gUtoM80_AtoU110_250.pdf")
+    
+elif mode == 3:
+    plt.savefig("timecourse_05x_gUtoM60_AtoU140_200.pdf")
+    
+elif mode == 4:
+    plt.savefig("timecourse_025x_gUtoM120_AtoU140.pdf")
+    
+    
+    
+
         
         
         
