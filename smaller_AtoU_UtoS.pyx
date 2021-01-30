@@ -290,7 +290,7 @@ def t_loop(double duration, int[:] mt_region, int[:] positions, double[:] rates,
                     Rand = 1
                 if Rand == 1:
                     x = -x
-                pos_conv = (pos_rec + x)%nn
+                pos_conv = pos_rec + x
                 
                 if pos_conv < 0 or pos_conv > nn - 1:
                     nuc_conv = -1
