@@ -37,7 +37,7 @@ def simple(X_Y):
    
     print(X_Y)
     
-    direct = X
+    direct = 1
     
     global_mode = X_Y[3]
     
@@ -48,7 +48,7 @@ def simple(X_Y):
     # local recruitment-rate A-catalysed change of U to A (recruited conversion)
     alpha3 = 100*len(mt_region)
     # global recruitment-rate (recruited conversion of A (0) to U (1))
-    alpha4 = 30*len(mt_region)
+    alpha4 = X*len(mt_region)
     # spontaneous conversion-rate (direct conversion of A to U)
     beta1 = direct*len(mt_region)
     # spontaneous conversion-rate (direct conversion)

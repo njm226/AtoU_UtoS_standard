@@ -330,7 +330,7 @@ if mode == 0:
 
         
     # save Timing list
-    with open('b_list_full_S350_standard_AtoU_UtoS.txt', 'wb') as F:
+    with open('b_list_full_S450_standard_AtoU_UtoS.txt', 'wb') as F:
         pickle.dump(b_value_list, F) 
 
         
