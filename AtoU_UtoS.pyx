@@ -268,7 +268,7 @@ def t_loop(int duration, int[:] mt_region, int[:] positions, double[:] rates, in
                 pos_conv = (pos_rec + x)%nn
                 
                 if pos_conv < 0 or pos_conv > nn - 1:
-                    nuc_conv = -10
+                    nuc_conv = -1
                 else:
                     nuc_conv = mt_region[pos_conv]
             
