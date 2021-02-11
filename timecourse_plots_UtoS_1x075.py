@@ -27,10 +27,10 @@ if mode == 1:
     X_Y_max=[[203,30,130, 1]]
     
 elif mode == 2:
-    X_Y=[[153, 80, 110, 2]]
-    X_Y_sm=[[182, 80, 110, 2]]
-    X_Y_sl=[[191, 80, 110, 2]]
-    X_Y_max=[[203, 80, 110, 2]]
+    X_Y=[[153, 69, 60, 2]]
+    X_Y_sm=[[182, 69, 60, 2]]
+    X_Y_sl=[[191, 69, 60, 2]]
+    X_Y_max=[[203, 69, 60, 2]]
     
 elif mode == 3:
     X_Y=[[153, 60, 140, 3]]
@@ -392,19 +392,19 @@ if mode == 1:
 
 elif mode == 2:
     # save state_list
-    with open('cenH_small_1x075_gUtoM100_AtoU110_S55.txt', 'wb') as F:
+    with open('cenH_small_1x075_gUtoM60_AtoU69_S250.txt', 'wb') as F:
         pickle.dump(cenH_total_small, F)
         
     # save state_list
-    with open('cenH_m_1x075_gUtoM100_AtoU110_S55.txt', 'wb') as F:
+    with open('cenH_m_1x075_gUtoM60_AtoU69_S250.txt', 'wb') as F:
         pickle.dump(cenH_total_m, F)
         
     # save state_list
-    with open('cenH_large_1x075_gUtoM100_AtoU110_S55.txt', 'wb') as F:
+    with open('cenH_large_1x075_gUtoM60_AtoU69_S250.txt', 'wb') as F:
       pickle.dump(cenH_total_large, F)
         
     # save state_list
-    with open('cenH_max_1x075_gUtoM100_AtoU110_S55.txt', 'wb') as F:
+    with open('cenH_max_1x075_gUtoM60_AtoU69_S250.txt', 'wb') as F:
         pickle.dump(cenH_total_max, F)
         
         
@@ -412,19 +412,19 @@ elif mode == 2:
     
         
     # save state_list
-    with open('EcoRV_small_1x075_gUtoM100_AtoU140_S55.txt', 'wb') as F:
+    with open('EcoRV_small_1x075_gUtoM60_AtoU69_S250.txt', 'wb') as F:
         pickle.dump(EcoRV_total_small, F)
         
     # save state_list
-    with open('EcoRV_m_1x075_gUtoM100_AtoU140_S55.txt', 'wb') as F:
+    with open('EcoRV_m_1x075_gUtoM60_AtoU69_S250.txt', 'wb') as F:
         pickle.dump(EcoRV_total_m, F)
         
     # save state_list
-    with open('EcoRV_large_1x075_gUtoM100_AtoU140_S55.txt', 'wb') as F:
+    with open('EcoRV_large_1x075_gUtoM60_AtoU69_S250.txt', 'wb') as F:
         pickle.dump(EcoRV_total_large, F)
         
     # save state_list
-    with open('EcoRV_max_1x075_gUtoM7100_AtoU140_S55.txt', 'wb') as F:
+    with open('EcoRV_max_1x075_gUtoM60_AtoU69_S250.txt', 'wb') as F:
         pickle.dump(EcoRV_total_max, F)
         
         
@@ -552,7 +552,7 @@ if mode == 1:
     plt.savefig("timecourse_1x_gUtoM30_AtoU130_120.pdf")
     
 elif mode == 2:
-    plt.savefig("timecourse_075x_gUtoM80_AtoU110_250.pdf")
+    plt.savefig("timecourse_075x_gUtoM60_AtoU69_S250.pdf")
     
 elif mode == 3:
     plt.savefig("timecourse_05x_gUtoM60_AtoU140_200.pdf")
